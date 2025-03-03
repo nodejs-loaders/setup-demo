@@ -1,0 +1,23 @@
+.Avatar {
+	--size: 1.5em;
+
+	border-radius: 100%;
+	border: 2px solid;
+	display: inline-block;
+	height: var(--size);
+	object-fit: cover;
+	vertical-align: middle;
+	width: var(--size);
+}
+
+.base {
+	border-color: #12ffa0;
+}
+
+.power {
+	border-color: #12d3ff;
+}
+
+.admin {
+	border-color: #ffc412;
+}

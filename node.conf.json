@@ -1,0 +1,10 @@
+{
+	"import": [
+		"@nodejs-loaders/tsx",
+		"@nodejs-loaders/css-module",
+		"@nodejs-loaders/media"
+	],
+	"require": [
+		"global-jsdom/register"
+	]
+}
