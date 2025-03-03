@@ -4,17 +4,24 @@
   "main": "./src/main.tsx",
   "type": "module",
   "scripts": {
-    "test": "node --test ./src/**/*.test.tsx"
+    "test": "node --env-file=./test.env --test ./src/**/*.test.tsx",
+    "test:coverage": "node --env-file=./test.env --test --experimental-test-coverage ./src/**/*.test.tsx",
+    "types:check": "tsc --noEmit"
   },
   "author": "Jacob Smith",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@nodejs-loaders/css-module": "^1.1.0",
+    "@nodejs-loaders/media": "^1.1.0",
+    "@nodejs-loaders/tsx": "^1.1.0",
     "@testing-library/react": "^16.2.0",
     "@types/node": "^22.13.8",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
-    "clsx": "^2.1.1"
+    "clsx": "^2.1.1",
+    "global-jsdom": "^26.0.0",
+    "typescript": "^5.8.2"
   },
   "dependencies": {
     "react": "^19.0.0",
