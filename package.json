@@ -4,17 +4,24 @@
   "main": "./src/main.tsx",
   "type": "module",
   "scripts": {
-    "test": "node --test ./src/**/*.test.tsx"
+    "start": "esbuild ./src/main.tsx --bundle --format=esm --loader:.png=file --loader=jsx --jsx=automatic --outdir=www/dist --servedir=www --sourcemap --public-path=dist/",
+    "test": "node --no-warnings --require global-jsdom/register --import @nodejs-loaders/tsx --import @nodejs-loaders/css-module --import @nodejs-loaders/media --test './src/**/*.test.tsx'"
   },
   "author": "Jacob Smith",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@nodejs-loaders/css-module": "^1.1.0",
+    "@nodejs-loaders/media": "^1.1.0",
+    "@nodejs-loaders/tsx": "^1.1.0",
     "@testing-library/react": "^16.2.0",
     "@types/node": "^22.13.8",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
-    "clsx": "^2.1.1"
+    "clsx": "^2.1.1",
+    "esbuild": "~0.25.0",
+    "global-jsdom": "^26.0.0",
+    "jsdom": "^26.0.0"
   },
   "dependencies": {
     "react": "^19.0.0",
