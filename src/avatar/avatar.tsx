@@ -2,6 +2,7 @@ import clsx from 'clsx';
 
 import styles from './avatar.module.css';
 import defaultAvatar from './default.png';
+import { generateGHSRC } from '../utils/github.ts';
 
 export const Avatar = ({
 	level = 'base',
@@ -13,11 +14,6 @@ export const Avatar = ({
 		src={username ? generateGHSRC(username) : defaultAvatar}
 	/>
 );
-
-const generateGHSRC = (username: string) => `${GH_BASE}${username}${GH_PARAMS}`;
-
-const GH_BASE = 'https://avatars.githubusercontent.com/';
-const GH_PARAMS = '?w=96&q=75';
 
 export const Level = {
 	Base: 'base',
